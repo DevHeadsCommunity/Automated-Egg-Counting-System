@@ -19,7 +19,6 @@ This egg counting system reduces human error and streamlines the counting proces
 - Lighting Setup (to ensure consistent visibility for the camera)
 
 ## Software Requirements
-
 - **Google Colab:** For training the YOLOv5 model on labeled egg images.
 - **Python 3:** With dependencies including OpenCV, YOLOv5, and PyTorch.
 - **Raspberry Pi OS**
@@ -54,10 +53,9 @@ This egg counting system reduces human error and streamlines the counting proces
 - Load the YOLOv5 model on the Raspberry Pi.
 - Use OpenCV to capture frames and process each frame through YOLOv5 to detect and count eggs.
 - Display the count on-screen or log it for batch record-keeping.
+- count only the eggs witch go through the check point .
 
-#### 3.3 Data Logging
 
-- Store real-time egg counts and timestamps for each batch in a log file for later analysis.
 
 ### 4. Testing and Validation
 
@@ -68,3 +66,46 @@ This egg counting system reduces human error and streamlines the counting proces
 
 - **Test Signal:** Validate the system by running a set of test eggs and analyzing the logged count.
 - **Optimize:** Fine-tune the model and lighting as needed to improve accuracy.
+
+### how to run 
+
+### Requirements
+Python 3.8 or higher.
+
+pip install -r requirements.txt
+
+Download the model (best.pt)
+
+### Install Dependencies:
+
+Use the requirements.txt file to install all necessary libraries:
+bash
+
+pip install -r requirements.txt
+
+### Pre-trained Model:
+
+Download the pre-trained model file (best.pth) 
+Save the model file in your preferred directory.
+
+## Update the Path to the Model:
+
+Open eggs_counting.py and update the path to point to the location of your model file:
+python
+
+model_path = "path/to/your/model/best.pth"  # Update this line
+How to Run the Project
+
+
+bash
+pip install -r requirements.txt
+Download the model file and update the path in eggs_counting.py.
+
+## Run the project:
+
+bash
+python eggs_counting.py
+
+Features
+Real-time egg detection using a webcam.
+count only the image witch go through the check point 
